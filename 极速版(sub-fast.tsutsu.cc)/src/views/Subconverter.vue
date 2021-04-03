@@ -11,24 +11,6 @@
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%;">
-              <el-form-item label="进阶选项:">
-                
-                  <div class="switch">
-                    <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="cmn-toggle-1"></label>
-                  </div>
-                  <div class="switch">
-                    <input id="cmn-toggle-4" click = "selectMode()" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-                    <label for="cmn-toggle-4" ></label>
-                  </div>
-                  <div class="switch">
-                    <input id="cmn-toggle-7" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
-                    <label for="cmn-toggle-7" class="cmn-toggle-label" data-on="1" data-off="2"></label>
-                  </div>
-
-                <el-radio v-model="advanced" label="1">基础模式</el-radio>
-                <el-radio v-model="advanced" label="2">进阶模式</el-radio>
-              </el-form-item>
               <el-form-item label="订阅链接:">
                 <el-input
                   v-model="form.sourceSubUrl"
@@ -123,17 +105,6 @@
                   >复制</el-button>
                 </el-input>
               </el-form-item>
-              <el-form-item label="订阅短链:">
-                <el-input class="copy-content" disabled v-model="curtomShortSubUrl">
-                  <el-button
-                    slot="append"
-                    v-clipboard:copy="curtomShortSubUrl"
-                    v-clipboard:success="onCopy"
-                    ref="copy-btn"
-                    icon="el-icon-document-copy"
-                  >复制</el-button>
-                </el-input>
-              </el-form-item>
 
               
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
@@ -143,31 +114,7 @@
                   @click="makeUrl"
                   :disabled="form.sourceSubUrl.length === 0"
                 >生成订阅链接</el-button>
-                <el-button
-                  style="width: 120px"
-                  type="primary"
-                  @click="makeShortUrl"
-                  :loading="loading"
-                  :disabled="customSubUrl.length === 0"
-                >生成短链接</el-button>
                 <!-- <el-button style="width: 120px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
-              </el-form-item>
-
-              <el-form-item label-width="0px" style="text-align: center">
-                <el-button
-                  style="width: 120px"
-                  type="primary"
-                  @click="dialogUploadConfigVisible = true"
-                  icon="el-icon-upload"
-                  :loading="loading"
-                >上传配置</el-button>
-                <el-button
-                  style="width: 120px"
-                  type="primary"
-                  @click="clashInstall"
-                  icon="el-icon-connection"
-                  :disabled="customSubUrl.length === 0"
-                >一键导入Clash</el-button>
               </el-form-item>
             </el-form>
           </el-container>
@@ -233,28 +180,15 @@ export default {
       options: {
         clientTypes: {
           Clash: "clash",
-          ClashR: "clashr",
-          Surge2: "surge&ver=2",
-          Surge3: "surge&ver=3",
-          Surge4: "surge&ver=4",
+          V2Ray: "v2ray",
+          "Shadowsocks": "ss",
+          ShadowsocksR: "ssr", 
+          Trojan: "trojan",
           Quantumult: "quan",
           "Quantumult X": "quanx",
-          Loon: "loon",
-          Mellow: "mellow",
-          Surfboard: "surfboard",
-          "Shadowsocks(SIP002)": "ss",
-          "Shadowsocks Android(SIP008)": "sssub",
-          ShadowsocksR: "ssr",
-          ShadowsocksD: "ssd",          
-          V2Ray: "v2ray",
-          Trojan: "trojan",
-          "混合订阅（mixed）": "mixed",
-          "自动判断客户端": "auto",
         },
         customBackend: {
-          "api.tsutsu.cc (つつ提供-国内裸奔小鸡）": "http://api.tsutsu.cc:520/sub?",
           "api2.tsutsu.cc (つつ提供-香港稳定）": "https://api2.tsutsu.cc/sub?",
-          "api-cf.tsutsu.cc (つつ提供-vercel）": "https://api-cf.tsutsu.cc/sub?",
           "subcon.dlj.tf (subconverter作者提供) ": "https://subcon.dlj.tf/sub?",
           "api.dler.io (sub作者&lhie1提供)": "https://api.dler.io/sub?",
           "api.wcc.best (sub-web作者提供)": "https://api.wcc.best/sub?",
@@ -263,9 +197,7 @@ export default {
           "sub.id9.cc (品云提供）": "https://sub.id9.cc/sub?",
         },
         backendOptions: [
-          { value: "http://api.tsutsu.cc:520/sub?" },
           { value: "https://api2.tsutsu.cc/sub?" },
-          { value: "https://api-cf.tsutsu.cc/sub?" },
           { value: "https://subcon.dlj.tf/sub?" },
           { value: "https://api.dler.io/sub?" },
           { value: "https://api.wcc.best/sub?" },
@@ -290,26 +222,6 @@ export default {
             ]
           },
           {
-            label: "用户投稿",
-            options: [
-              {
-                label: "hope140自用配置 (与Github同步)",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/hope140.yaml"
-              },
-              {
-                label: "hope140去广告配置",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/Adblock.yaml"
-              },
-              {
-                label: "hope140全分组",
-                value:
-                  "https://cdn.staticaly.com/gh/hope140/Clash/beta/All.yaml"
-              },
-            ]
-          },
-          {
             label: "ACL4SSR",
             options: [
               {
@@ -321,16 +233,6 @@ export default {
                 label: "ACL4SSR去广告",
                 value:
                   "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
-              },
-              {
-                label: "ACL4SSR无自动测速",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
-              },
-              {
-                label: "ACL4SSR无广告拦截",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
               },
               {
                 label: "ACL4SSR精简版",
@@ -351,16 +253,6 @@ export default {
                 label: "ACL4SSR全分组",
                 value:
                   "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
-              },
-              {
-                label: "ACL4SSR全分组多模式",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"
-              },
-              {
-                label: "ACL4SSR全分组重度用户",
-                value:
-                  "https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
               }
             ]
           },
