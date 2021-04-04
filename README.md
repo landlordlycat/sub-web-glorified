@@ -14,6 +14,7 @@
 |   hope140    | 自用配置 (与Github同步)  |
 |   hope140    | 去广告配置               |
 |   hope140    | 全分组                   |
+|   Nine499    | 自用规则                 |
 
 后端：（Telegram投稿： [@Ox208](https://t.me/Ox208)）
 
@@ -27,7 +28,8 @@
 | sub-web作者      | api.wcc.best       | 稳定         |
 | hope140          | api.hope140.live   | vercel       |
 | Allen Xu         | sub.proxypoolv2.tk | vercel       |
-| 品云             | sub.id9.cc         |              |
+| 品云             | sub.id9.cc         | 品各种云...  |
+| shadows          | sub-beta.now.sh    | vercel-测试  |
 
 ------
 
