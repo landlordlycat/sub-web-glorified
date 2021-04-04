@@ -393,15 +393,13 @@ body,html {
           // $('body').css('overflow');
           $(".sk-chase").fadeOut(1000);
           $(".loading-div").fadeOut(1000);
-          $(".intro-container").fadeIn(2000);
-          // clearInterval(disInterval);
-	        // document.getElementById("sky-container").style.height = document.getElementById("app").style.height;
-	        // document.getElementById("app").style.display = "block";
-	        // document.getElementById("sky-container").style.display = "block";
-	        // var introTimeline = new TimelineMax();
-	        // introTimeline.add([TweenLite.fromTo(introContainer, 0.5, { opacity: 1 }, { opacity: 0, ease: Power3.easeIn }), TweenLite.to(camera.rotation, 3, { x: Math.PI / 2, ease: Power3.easeInOut }), TweenLite.to(camera.position, 2.5, { z: 20, ease: Power3.easeInOut }), TweenLite.to(camera.position, 3, { y: 120, ease: Power3.easeInOut }), TweenLite.to(plane.scale, 3, { x: 2, ease: Power3.easeInOut })]);
-          // introTimeline.add([TweenLite.to(xMark, 2, { opacity: 1, ease: Power3.easeInOut }), TweenLite.to(skyContainer, 0.8, { opacity: 1, ease: Power3.easeInOut })]);
-      
+          clearInterval(disInterval);
+	        document.getElementById("sky-container").style.height = document.getElementById("app").style.height;
+	        document.getElementById("app").style.display = "block";
+	        document.getElementById("sky-container").style.display = "block";
+	        var introTimeline = new TimelineMax();
+	        introTimeline.add([TweenLite.fromTo(introContainer, 0.5, { opacity: 1 }, { opacity: 0, ease: Power3.easeIn }), TweenLite.to(camera.rotation, 3, { x: Math.PI / 2, ease: Power3.easeInOut }), TweenLite.to(camera.position, 2.5, { z: 20, ease: Power3.easeInOut }), TweenLite.to(camera.position, 3, { y: 120, ease: Power3.easeInOut }), TweenLite.to(plane.scale, 3, { x: 2, ease: Power3.easeInOut })]);
+          introTimeline.add([TweenLite.to(xMark, 2, { opacity: 1, ease: Power3.easeInOut }), TweenLite.to(skyContainer, 0.8, { opacity: 1, ease: Power3.easeInOut })]);
       }
     }
     </script>

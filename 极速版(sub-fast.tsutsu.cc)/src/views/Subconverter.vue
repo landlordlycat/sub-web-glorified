@@ -6,7 +6,7 @@
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="quick" style="margin-left: 20px" title="极速版:v1.0"/>
             つつの订阅转换
-            <svg-icon icon-class="telegram" style="margin-left: 20px" title="加入Telegram吹水群" @click="gotoTgChannel" />
+            <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
             <svg-icon icon-class="github" style="margin-left: 10px" title="进入Github项目页面" @click="gotoGayhub" />
           </div>
           <el-container>
@@ -109,11 +109,12 @@
               
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
                 <el-button
-                  style="width: 120px"
                   type="primary"
                   @click="makeUrl"
                   :disabled="form.sourceSubUrl.length === 0"
-                >生成订阅链接</el-button>
+                >
+                <img src="right.png" height="50px" width="50px" style="display:relative;left:0;top:0;right:0;bottom:0;margin:auto;">
+                </el-button>
                 <!-- <el-button style="width: 120px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
               </el-form-item>
             </el-form>
@@ -340,7 +341,7 @@ export default {
     this.form.clientType = "clash";
     this.form.customBackend = "https://api2.tsutsu.cc/sub?";
     this.form.remoteConfig = "https://cdn.staticaly.com/gh/lhl77/sub-ini/main/tsutsu-full.ini";
-    this.getBackendVersion();
+    //this.getBackendVersion();
   },
   methods: {
     onCopy() {

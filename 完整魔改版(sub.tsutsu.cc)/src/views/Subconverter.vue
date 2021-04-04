@@ -6,7 +6,7 @@
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="lock" style="margin-left: 20px" title="完整魔改版:v1.2"/>
             つつの订阅转换
-            <svg-icon icon-class="telegram" style="margin-left: 20px" title="加入Telegram吹水群" @click="gotoTgChannel" />
+            <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
             <svg-icon icon-class="github" style="margin-left: 10px" title="进入Github项目页面" @click="gotoGayhub" />
           </div>
           <el-container>
@@ -101,6 +101,7 @@
                       <el-checkbox v-model="form.nodeList" label="输出为 Node List" border></el-checkbox>
                       <el-checkbox v-model="form.emoji" label="Emoji" border></el-checkbox>
                       <el-checkbox v-model="form.sort" label="排序节点" border></el-checkbox>
+                      <el-checkbox v-model="form.udp" @change="needUdp = true" label="启用 UDP" border></el-checkbox>
                     </el-col> 
                   </el-row>
                 </el-form-item>
@@ -252,26 +253,28 @@ export default {
           "自动判断客户端": "auto",
         },
         customBackend: {
-          "api.tsutsu.cc (つつ提供-国内裸奔小鸡）": "http://api.tsutsu.cc:520/sub?",
-          "api2.tsutsu.cc (つつ提供-香港稳定）": "https://api2.tsutsu.cc/sub?",
-          "api-cf.tsutsu.cc (つつ提供-vercel）": "https://api-cf.tsutsu.cc/sub?",
+          "api.tsutsu.cc (つつ提供-国内裸奔小鸡)": "http://api.tsutsu.cc:520/sub?",
+          "api2.tsutsu.cc (つつ提供-香港稳定)": "https://api2.tsutsu.cc/sub?",
+          "api.v1.mk（肥羊提供-四端八核负载)": "https://api.v1.mk/sub?",
           "subcon.dlj.tf (subconverter作者提供) ": "https://subcon.dlj.tf/sub?",
           "api.dler.io (sub作者&lhie1提供)": "https://api.dler.io/sub?",
           "api.wcc.best (sub-web作者提供)": "https://api.wcc.best/sub?",
-          "api.hope140.live (hope提供-vercel）": "https://api.hope140.live/sub?",
-          "sub.proxypoolv2.tk (Allen Xu提供-vercel）": "https://sub.proxypoolv2.tk/sub?",
-          "sub.id9.cc (品云提供）": "https://sub.id9.cc/sub?",
+          "api.hope140.live (hope提供-vercel)": "https://api.hope140.live/sub?",
+          "sub.proxypoolv2.tk (Allen Xu提供-vercel)": "https://sub.proxypoolv2.tk/sub?",
+          "sub.id9.cc (品云提供)": "https://sub.id9.cc/sub?",
+          "sub-beta.now.sh (shadows提供-vercel-测试)": "https://sub-beta.now.sh/sub?",
         },
         backendOptions: [
           { value: "http://api.tsutsu.cc:520/sub?" },
           { value: "https://api2.tsutsu.cc/sub?" },
-          { value: "https://api-cf.tsutsu.cc/sub?" },
+          { value: "https://api.v1.mk/sub?" },
           { value: "https://subcon.dlj.tf/sub?" },
           { value: "https://api.dler.io/sub?" },
           { value: "https://api.wcc.best/sub?" },
           { value: "https://api.hope140.live/sub?" },
           { value: "https://sub.proxypoolv2.tk/sub?" },
           { value: "https://sub.id9.cc/sub?" },
+          { value: "https://sub-beta.now.sh/sub?" },
         ],
         remoteConfig: [
           {
@@ -306,6 +309,21 @@ export default {
                 label: "hope140全分组",
                 value:
                   "https://cdn.staticaly.com/gh/hope140/Clash/beta/All.yaml"
+              },
+              {
+                label: "Nine499自用规则",
+                value:
+                  "https://cdn.staticaly.com/gh/Nine499/Clash-Rule/master/Rule"
+              },
+              {
+                label: "AllenXu精简版多国家",
+                value:
+                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/cdn_multicountry.ini"
+              },
+              {
+                label: "AllenXu小机场专用",
+                value:
+                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/smallairport.ini"
               },
             ]
           },
@@ -448,7 +466,7 @@ export default {
     this.form.clientType = "clash";
     this.form.customBackend = "https://api2.tsutsu.cc/sub?";
     this.form.remoteConfig = "https://cdn.staticaly.com/gh/lhl77/sub-ini/main/tsutsu-full.ini";
-    this.getBackendVersion();
+    //this.getBackendVersion();
   },
   methods: {
     onCopy() {

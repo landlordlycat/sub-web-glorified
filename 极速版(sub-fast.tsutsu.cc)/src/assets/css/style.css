@@ -81,7 +81,10 @@
 
 .el-button--primary,.el-button--warning,.el-button--success,.el-button--danger {
 	background-color: #2C5E8A!important;
-	border-radius:10px !important;
+	border-radius:40% !important;
+	height:70px !important;
+	width:70px !important;
+	padding:0 !important;
 }
 
 .el-collapse-item .el-button--limr {
@@ -270,17 +273,19 @@
 	height:38px !important;
 }
 .el-form-item:last-child .el-button--primary {
-	background-color: #303133 !important;
-	border-color: #303133 !important;
+	background: linear-gradient(to right, #303133, #555) !important;
+	border:#bfc0c0 2px solid;
 }
 
 .el-form-item:last-child .el-button--primary:focus,.el-form-item:last-child .el-button--primary:hover {
 	background: #666 !important;
-	border-color: #666 !important;
+	border-color: #bfc0c0 !important;
+	border-radius:50% !important;
+	transition: 1s;
 }
 
 .el-form-item:last-child .el-button--primary.is-disabled {
-	background: #999 !important;
+	background: linear-gradient(to right, #555, #789) !important;
 	border-color: #999 !important;
 }
 
@@ -370,13 +375,10 @@ el-select-group__wrap {
 	color: #fff !important;
 }
 
-.dialog-footer .el-button--primary:focus,.dialog-footer .el-button--primary:hover {
-	background: #666 !important;
-	border-color: #666 !important;
-}
+
 
 .dialog-footer .el-button--primary.is-disabled,.dialog-footer .el-button--primary.is-disabled:active,.dialog-footer .el-button--primary.is-disabled:focus,.dialog-footer .el-button--primary.is-disabled:hover {
-	background: #999 !important;
+	background: linear-gradient(to right, #555, #789) !important;
 	border-color: #999 !important;
 	color: #fff !important;
 }
@@ -455,3 +457,9 @@ input.cmn-toggle-round-flat + label {
 	margin-left: 20px;
 	background-color:rgb(193, 182, 255);
   }
+
+  .dialog-footer .el-button--primary:focus,.dialog-footer .el-button--primary:hover {
+	background: linear-gradient(to right, #789, #555) !important;
+	border-color: #666 !important;
+	border-radius:30% !important;
+}
