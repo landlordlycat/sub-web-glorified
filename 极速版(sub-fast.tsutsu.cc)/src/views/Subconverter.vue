@@ -6,7 +6,7 @@
           <div slot="header" style="blackground-color:#0F4677;text-align:center;font-size :25px !important;font-weight: bold !important;">
             <svg-icon icon-class="quick" style="margin-left: 20px" title="极速版:v1.0"/>
             つつの订阅转换
-            <svg-icon icon-class="telegram" style="margin-left: 20px" title="加入Telegram吹水群" @click="gotoTgChannel" />
+            <svg-icon icon-class="telegram" style="margin-left: 10px" title="加入Telegram吹水群" @click="gotoTgChannel" />
             <svg-icon icon-class="github" style="margin-left: 10px" title="进入Github项目页面" @click="gotoGayhub" />
           </div>
           <el-container>
