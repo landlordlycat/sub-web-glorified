@@ -30,19 +30,19 @@
 
 后端：（Telegram投稿： [@Ox208](https://t.me/Ox208)）
 
-| 提供者           | 后端域名           | 备注                     |
-| ---------------- | ------------------ | ------------------------ |
-| つつ             | api.tsutsu.cc:520  | 国内裸奔小鸡             |
-| つつ             | api2.tsutsu.cc     | 香港稳定                 |
-| つつ             | api-cf.tsutsu.cc   | cf-verce                 |
-| 肥羊             | api.v1.mk          | 增强型-四端负载 (2H4G*4) |
-| subconverter作者 | subcon.dlj.tf      | 稳定                     |
-| sub作者&lhie1    | api.dler.io        | 稳定                     |
-| sub-web作者      | api.wcc.best       | 稳定                     |
-| hope140          | api.hope140.live   | vercel                   |
-| Allen Xu         | sub.proxypoolv2.tk | vercel                   |
-| 品云             | sub.id9.cc         | 品各种云...              |
-| shadows          | sub-beta.now.sh    | vercel-测试              |
+| 提供者           | 后端域名                                  | 备注                     |
+| ---------------- | ----------------------------------------- | ------------------------ |
+| つつ             | api.tsutsu.cc:520                         | 国内裸奔小鸡             |
+| つつ             | api2.tsutsu.cc                            | 香港稳定                 |
+| つつ             | ~~api-cf.tsutsu.cc~~<u>已隐藏，仍可用</u> | ~~cf-vercel~~            |
+| 肥羊             | api.v1.mk                                 | 增强型-四端负载 (2H4G*4) |
+| subconverter作者 | subcon.dlj.tf                             | 稳定                     |
+| sub作者&lhie1    | api.dler.io                               | 稳定                     |
+| sub-web作者      | api.wcc.best                              | 稳定                     |
+| hope140          | api.hope140.live                          | vercel                   |
+| Allen Xu         | sub.proxypoolv2.tk                        | vercel                   |
+| 品云             | sub.id9.cc                                | 品各种云...              |
+| shadows          | sub-beta.now.sh                           | vercel-测试              |
 
 ------
 
