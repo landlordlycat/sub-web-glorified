@@ -448,7 +448,7 @@ export default {
     this.form.clientType = "clash";
     this.form.customBackend = "https://api2.tsutsu.cc/sub?";
     this.form.remoteConfig = "https://cdn.staticaly.com/gh/lhl77/sub-ini/main/tsutsu-full.ini";
-    this.getBackendVersion();
+    //this.getBackendVersion();
   },
   methods: {
     onCopy() {
