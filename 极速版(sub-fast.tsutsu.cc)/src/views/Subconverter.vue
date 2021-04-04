@@ -109,11 +109,12 @@
               
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
                 <el-button
-                  style="width: 120px"
                   type="primary"
                   @click="makeUrl"
                   :disabled="form.sourceSubUrl.length === 0"
-                >生成订阅链接</el-button>
+                >
+                <img src="right.png" height="50px" width="50px" style="display:relative;left:0;top:0;right:0;bottom:0;margin:auto;">
+                </el-button>
                 <!-- <el-button style="width: 120px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
               </el-form-item>
             </el-form>
