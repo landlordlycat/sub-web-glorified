@@ -311,7 +311,7 @@ export default {
                   "https://cdn.staticaly.com/gh/hope140/Clash/beta/All.yaml"
               },
               {
-                label: "Nine499 自用规则",
+                label: "Nine499自用规则",
                 value:
                   "https://cdn.staticaly.com/gh/Nine499/Clash-Rule/master/Rule"
               },
