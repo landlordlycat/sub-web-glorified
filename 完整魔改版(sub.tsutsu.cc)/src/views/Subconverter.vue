@@ -315,6 +315,16 @@ export default {
                 value:
                   "https://cdn.staticaly.com/gh/Nine499/Clash-Rule/master/Rule"
               },
+              {
+                label: "AllenXu精简版多国家",
+                value:
+                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/cdn_multicountry.ini"
+              },
+              {
+                label: "AllenXu小机场专用",
+                value:
+                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/smallairport.ini"
+              },
             ]
           },
           {
