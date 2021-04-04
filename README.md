@@ -54,4 +54,4 @@
 
 #### (砍掉了部分功能)
 
-图片示例：![3](./README_file/3.png)
+图片示例：![3](./README_file/fast.png)
