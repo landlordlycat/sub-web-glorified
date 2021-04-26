@@ -66,3 +66,6 @@
 #### (砍掉了部分功能)
 
 图片示例：![3](./README_file/fast.png)
+
+
+Wiki:[点击这里](https://github.com/hyt-allen-xu/sub-web-glorified/wiki/%E3%81%A4%E3%81%A4%E3%81%AE%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2-(sub-web))
