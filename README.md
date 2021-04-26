@@ -10,9 +10,9 @@
 
 ## 更新信息
 
-**版本号：2104162042**
+**版本号：2104160848**
 
-**更新时间：2021/04/16 20:42**
+**更新时间：2021/04/26 08:48**
 
 ------
 
@@ -34,6 +34,7 @@
 |   Nine499    | 自用规则                |
 |   AllenXu    | 精简版多国家            |
 |   AllenXu    | 小机场专用配置          |
+|   AllenXu    | 自建节点专用配置          |
 
 后端：（Telegram投稿： [@Ox208](https://t.me/Ox208)）
 
@@ -48,6 +49,7 @@
 | sub-web作者      | api.wcc.best                              | 稳定                     |
 | hope140          | api.hope140.live                          | vercel                   |
 | Allen Xu         | sub.proxypoolv2.tk                        | vercel                   |
+| Allen Xu         | jp-aws.proxypoolv2.tk:255--                     | JP-AWS-EC2                   |
 | 品云             | sub.id9.cc                                | 品各种云...              |
 | shadows          | ~~sub-beta.now.sh~~<u>已隐藏，仍可用</u>  | ~~vercel-测试~~          |
 
