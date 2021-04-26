@@ -10,9 +10,9 @@
 
 ## 更新信息
 
-**版本号：2104101153**
+**版本号：2104162042**
 
-**更新时间：2021/04/10 11:53**
+**更新时间：2021/04/16 20:42**
 
 ------
 
@@ -49,7 +49,7 @@
 | hope140          | api.hope140.live                          | vercel                   |
 | Allen Xu         | sub.proxypoolv2.tk                        | vercel                   |
 | 品云             | sub.id9.cc                                | 品各种云...              |
-| shadows          | sub-beta.now.sh                           | vercel-测试              |
+| shadows          | ~~sub-beta.now.sh~~<u>已隐藏，仍可用</u>  | ~~vercel-测试~~          |
 
 ------
 
