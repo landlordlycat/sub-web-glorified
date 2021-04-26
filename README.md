@@ -49,7 +49,7 @@
 | sub-web作者      | api.wcc.best                              | 稳定                     |
 | hope140          | api.hope140.live                          | vercel                   |
 | Allen Xu         | sub.proxypoolv2.tk                        | vercel                   |
-| Allen Xu         | jp-aws.proxypoolv2.tk:255--                     | JP-AWS-EC2                   |
+| Allen Xu         | jp-aws.proxypoolv2.tk:25500                    | JP-AWS-EC2                   |
 | 品云             | sub.id9.cc                                | 品各种云...              |
 | shadows          | ~~sub-beta.now.sh~~<u>已隐藏，仍可用</u>  | ~~vercel-测试~~          |
 
