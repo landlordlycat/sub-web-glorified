@@ -261,6 +261,7 @@ export default {
           "api.wcc.best (sub-web作者提供)": "https://api.wcc.best/sub?",
           "api.hope140.live (hope提供-vercel)": "https://api.hope140.live/sub?",
           "sub.proxypoolv2.tk (Allen Xu提供-vercel)": "https://sub.proxypoolv2.tk/sub?",
+          "jp-aws.proxypoolv2.tk (Allen Xu提供-日本AWS）": "http://jp-aws.proxypoolv2.tk:25500/sub?",
           "sub.id9.cc (品云提供)": "https://sub.id9.cc/sub?",
         },
         backendOptions: [
@@ -327,6 +328,10 @@ export default {
                 label: "AllenXu小机场专用",
                 value:
                   "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/smallairport.ini"
+              },
+              {
+                label: "Allen Xu 自建节点专用(与Github同步)",
+                value: "https://cdn.jsdelivr.net/gh/hyt-allen-xu/webcdn@master/own_setup.ini"
               },
             ]
           },
